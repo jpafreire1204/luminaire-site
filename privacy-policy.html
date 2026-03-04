@@ -162,8 +162,18 @@
 
         <h2>3. Compartilhamento de Dados com Terceiros</h2>
         <p>O Luminaire <strong>não vende</strong>, <strong>não compartilha</strong> e <strong>não transfere</strong> seus dados pessoais a terceiros para fins comerciais, publicitários ou de qualquer outra natureza.</p>
-        <p>O aplicativo <strong>não utiliza</strong> cookies, ferramentas de rastreamento de anúncios, pixels de remarketing nem serviços de analytics de terceiros (como Google Analytics, Firebase Analytics, Meta Pixel ou similares).</p>
+        <p>O aplicativo <strong>não utiliza</strong> cookies, ferramentas de rastreamento de anúncios, pixels de remarketing nem serviços de analytics comportamental de terceiros (como Google Analytics, Firebase Analytics, Meta Pixel ou similares).</p>
         <p>Os dados são armazenados em infraestrutura fornecida pelo Supabase (descrito na Seção 4), que atua como operador de dados sob nossas instruções, exclusivamente para viabilizar o funcionamento técnico do aplicativo.</p>
+
+        <h3>3.1. Monitoramento de Erros (Sentry)</h3>
+        <p>Para garantir a estabilidade e a qualidade do aplicativo, o Luminaire utiliza o serviço Sentry (sentry.io) para monitoramento automático de erros técnicos. Quando ocorre uma falha no aplicativo, as seguintes informações técnicas podem ser enviadas ao Sentry:</p>
+        <ul>
+            <li>Tipo e mensagem do erro</li>
+            <li>Stack trace (rastreamento técnico do erro)</li>
+            <li>Versão do aplicativo e sistema operacional</li>
+            <li>Modelo do dispositivo (ex.: iPhone 15, Pixel 8)</li>
+        </ul>
+        <p>Esses dados <strong>não incluem</strong> conteúdo pessoal como nome, email, sessões de meditação ou preferências. São utilizados exclusivamente para identificar e corrigir problemas técnicos. O Sentry atua como operador de dados sob nossas instruções, e seus servidores estão localizados nos Estados Unidos, em conformidade com suas políticas de proteção de dados.</p>
 
         <h2>4. Armazenamento e Segurança dos Dados</h2>
         <p>Adotamos medidas técnicas e organizacionais para proteger seus dados pessoais contra acessos não autorizados, perdas ou alterações indevidas:</p>
