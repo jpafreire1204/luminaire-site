@@ -115,7 +115,7 @@
         <h1>Política de Privacidade</h1>
     </div>
     <div class="container">
-        <p class="updated">Última atualização: 28 de fevereiro de 2026</p>
+        <p class="updated">Última atualização: 13 de junho de 2026</p>
 
         <p class="intro">A presente Política de Privacidade descreve como o aplicativo <strong>Luminaire</strong>, desenvolvido e mantido por <strong>João Paulo Afonso Freire</strong>, coleta, utiliza, armazena e protege os dados pessoais dos seus usuários, em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD) e demais normas aplicáveis.</p>
 
@@ -128,25 +128,31 @@
         <ul>
             <li>Endereço de e-mail</li>
             <li>Senha (armazenada de forma hasheada — o Luminaire nunca tem acesso à sua senha em texto puro)</li>
+            <li>Caso você opte por entrar com o Google ou com a Apple (Sign in with Apple), recebemos do provedor escolhido o seu e-mail e um identificador da conta para criar e autenticar o seu acesso. Não recebemos a sua senha desses provedores.</li>
         </ul>
 
         <h3>1.2. Dados de Perfil</h3>
         <ul>
             <li>Nome de exibição (opcional)</li>
-            <li>Profissão na área da saúde (ex.: enfermeiro, médico, psicólogo, fisioterapeuta, técnico de enfermagem, farmacêutico, outro)</li>
+            <li>Profissão na área da saúde (ex.: médico, enfermeiro, técnico de enfermagem, psicólogo, fisioterapeuta, estudante, outro ou prefiro não informar)</li>
+            <li>Gênero</li>
+            <li>Data de nascimento</li>
             <li>Padrão de turno de trabalho (diurno, noturno, plantão ou misto)</li>
             <li>Preferência de voz para meditações guiadas (masculina ou feminina)</li>
-            <li>Preferência de duração das sessões (curta, padrão ou longa)</li>
         </ul>
 
         <h3>1.3. Dados de Uso</h3>
         <ul>
             <li>Histórico de sessões de meditação realizadas (faixa reproduzida, protocolo, duração efetiva, data e hora, status de conclusão)</li>
+            <li>Avaliação de humor informada ao final de uma sessão, quando você opta por registrá-la</li>
             <li>Faixas de meditação marcadas como favoritas</li>
             <li>Configuração de notificações (ativadas/desativadas e horário preferido)</li>
         </ul>
 
-        <h3>1.4. Dados Não Coletados</h3>
+        <h3>1.4. Dados de Uso Analítico</h3>
+        <p>Para entender de forma agregada como o aplicativo é utilizado e aprimorá-lo, o Luminaire registra eventos de uso associados a um <strong>identificador persistente do dispositivo</strong> gerado pelo próprio aplicativo (não vinculado a identificadores de publicidade). São registrados eventos como abertura do aplicativo, início e conclusão de meditações e conclusão do onboarding. Esses eventos são armazenados na nossa própria infraestrutura (Supabase) e <strong>não</strong> são compartilhados com redes de anúncios nem com serviços de analytics de terceiros.</p>
+
+        <h3>1.5. Dados Não Coletados</h3>
         <p>O Luminaire <strong>não coleta</strong> dados de localização, dados biométricos, contatos do dispositivo, fotos, dados de navegação em outros aplicativos, identificadores de publicidade nem quaisquer outros dados além dos listados acima.</p>
 
         <h2>2. Finalidade do Tratamento de Dados</h2>
@@ -157,23 +163,36 @@
             <li><strong>Estatísticas pessoais:</strong> exibir seu progresso, sequência de dias, tempo total de prática e protocolo mais utilizado</li>
             <li><strong>Favoritos:</strong> salvar suas faixas preferidas para acesso rápido</li>
             <li><strong>Notificações:</strong> enviar lembretes diários de meditação, quando autorizados por você</li>
+            <li><strong>Gestão de assinaturas:</strong> oferecer, processar e validar a assinatura premium</li>
+            <li><strong>Melhoria do aplicativo:</strong> entender de forma agregada como os recursos são utilizados e corrigir falhas técnicas</li>
             <li><strong>Sincronização:</strong> manter seus dados acessíveis em diferentes dispositivos vinculados à mesma conta</li>
         </ul>
 
         <h2>3. Compartilhamento de Dados com Terceiros</h2>
-        <p>O Luminaire <strong>não vende</strong>, <strong>não compartilha</strong> e <strong>não transfere</strong> seus dados pessoais a terceiros para fins comerciais, publicitários ou de qualquer outra natureza.</p>
+        <p>O Luminaire <strong>não vende</strong>, <strong>não aluga</strong> e <strong>não compartilha</strong> seus dados pessoais com terceiros para fins comerciais ou publicitários.</p>
         <p>O aplicativo <strong>não utiliza</strong> cookies, ferramentas de rastreamento de anúncios, pixels de remarketing nem serviços de analytics comportamental de terceiros (como Google Analytics, Firebase Analytics, Meta Pixel ou similares).</p>
-        <p>Os dados são armazenados em infraestrutura fornecida pelo Supabase (descrito na Seção 4), que atua como operador de dados sob nossas instruções, exclusivamente para viabilizar o funcionamento técnico do aplicativo.</p>
+        <p>Para viabilizar o funcionamento do aplicativo, contamos com um número limitado de operadores (provedores de serviço) que tratam dados estritamente sob nossas instruções: o <strong>Supabase</strong> (infraestrutura de banco de dados e autenticação, descrito na Seção 4), o <strong>RevenueCat</strong> (gestão de assinaturas) e o <strong>Sentry</strong> (monitoramento de erros), descritos a seguir.</p>
 
-        <h3>3.1. Monitoramento de Erros (Sentry)</h3>
-        <p>Para garantir a estabilidade e a qualidade do aplicativo, o Luminaire utiliza o serviço Sentry (sentry.io) para monitoramento automático de erros técnicos. Quando ocorre uma falha no aplicativo, as seguintes informações técnicas podem ser enviadas ao Sentry:</p>
+        <h3>3.1. Gestão de Assinaturas (RevenueCat)</h3>
+        <p>Para oferecer e gerenciar a assinatura premium, o Luminaire utiliza o serviço RevenueCat (revenuecat.com), que processa e valida suas compras junto à App Store e ao Google Play. Para isso, são compartilhados com o RevenueCat:</p>
+        <ul>
+            <li>O seu identificador de usuário no Luminaire</li>
+            <li>O seu endereço de e-mail</li>
+            <li>O seu nome de exibição</li>
+            <li>O histórico de compras e o status da sua assinatura</li>
+        </ul>
+        <p>O RevenueCat atua como operador de dados sob nossas instruções e mantém servidores nos Estados Unidos. O registro de cliente mantido pelo RevenueCat <strong>não</strong> é excluído automaticamente quando você exclui sua conta (ver Seção 7).</p>
+
+        <h3>3.2. Monitoramento de Erros (Sentry)</h3>
+        <p>Para garantir a estabilidade e a qualidade do aplicativo, o Luminaire utiliza o serviço Sentry (sentry.io) para monitoramento automático de erros técnicos. Quando ocorre uma falha no aplicativo, as seguintes informações podem ser enviadas ao Sentry:</p>
         <ul>
             <li>Tipo e mensagem do erro</li>
             <li>Stack trace (rastreamento técnico do erro)</li>
             <li>Versão do aplicativo e sistema operacional</li>
             <li>Modelo do dispositivo (ex.: iPhone 15, Pixel 8)</li>
+            <li>O seu identificador de usuário, anexado ao relatório para que possamos correlacionar e investigar o problema na sua conta</li>
         </ul>
-        <p>Esses dados <strong>não incluem</strong> conteúdo pessoal como nome, email, sessões de meditação ou preferências. São utilizados exclusivamente para identificar e corrigir problemas técnicos. O Sentry atua como operador de dados sob nossas instruções, e seus servidores estão localizados nos Estados Unidos, em conformidade com suas políticas de proteção de dados.</p>
+        <p>Esses relatórios destinam-se exclusivamente à identificação e correção de problemas técnicos. O Sentry atua como operador de dados sob nossas instruções, e seus servidores estão localizados nos Estados Unidos, em conformidade com suas políticas de proteção de dados.</p>
 
         <h2>4. Armazenamento e Segurança dos Dados</h2>
         <p>Adotamos medidas técnicas e organizacionais para proteger seus dados pessoais contra acessos não autorizados, perdas ou alterações indevidas:</p>
@@ -189,7 +208,7 @@
         <p>O tratamento dos seus dados pessoais tem como bases legais (art. 7º da LGPD):</p>
         <ul>
             <li><strong>Consentimento</strong> (art. 7º, I): fornecido ao criar sua conta e aceitar esta Política</li>
-            <li><strong>Execução de contrato</strong> (art. 7º, V): necessário para a prestação do serviço contratado (uso do aplicativo)</li>
+            <li><strong>Execução de contrato</strong> (art. 7º, V): necessário para a prestação do serviço contratado (uso do aplicativo e da assinatura)</li>
         </ul>
 
         <h2>6. Seus Direitos (LGPD)</h2>
@@ -202,13 +221,14 @@
             <li><strong>Eliminação</strong> — solicitar a eliminação dos dados pessoais tratados com base no seu consentimento</li>
             <li><strong>Revogação do consentimento</strong> — revogar o consentimento a qualquer momento, sem prejuízo da legalidade do tratamento realizado anteriormente</li>
             <li><strong>Oposição</strong> — opor-se ao tratamento realizado em desconformidade com a LGPD</li>
-            <li><strong>Informação sobre compartilhamento</strong> — solicitar informações sobre entidades com as quais seus dados foram compartilhados (nenhuma, no caso do Luminaire)</li>
+            <li><strong>Informação sobre compartilhamento</strong> — solicitar informações sobre os operadores com os quais seus dados são compartilhados (listados na Seção 3)</li>
         </ul>
         <p>Para exercer qualquer desses direitos, entre em contato pelo e-mail <strong>luminaireapp@gmail.com</strong>. Responderemos à sua solicitação no prazo de até 15 (quinze) dias úteis.</p>
 
         <h2>7. Retenção de Dados</h2>
-        <p>Seus dados pessoais serão mantidos enquanto sua conta no Luminaire estiver ativa.</p>
-        <p>Caso você solicite a exclusão da sua conta — seja pelo aplicativo ou por e-mail — todos os seus dados pessoais, incluindo perfil, histórico de sessões e favoritos, serão removidos permanentemente do banco de dados em até 30 (trinta) dias a contar da solicitação.</p>
+        <p>Seus dados pessoais são mantidos enquanto sua conta no Luminaire estiver ativa.</p>
+        <p>Você pode excluir sua conta diretamente pelo aplicativo (Perfil → Conta) ou mediante solicitação por e-mail. Ao excluir a conta, todos os dados armazenados na nossa infraestrutura (Supabase) — incluindo perfil, histórico de sessões e favoritos — são removidos permanentemente do banco de dados de forma imediata e irreversível.</p>
+        <p><strong>Exceção — RevenueCat:</strong> o registro de cliente mantido pelo nosso provedor de assinaturas (RevenueCat), que contém o seu identificador de usuário, e-mail e nome de exibição, não é excluído automaticamente nesse processo. Caso deseje a sua remoção, solicite-a pelo e-mail de contato e nós a providenciaremos.</p>
         <p>Dados poderão ser mantidos por prazo superior apenas quando houver obrigação legal ou regulatória que assim exija.</p>
 
         <h2>8. Menores de Idade</h2>
